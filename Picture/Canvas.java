@@ -29,7 +29,7 @@ public class Canvas
     {
         if(canvasSingleton == null) {
             canvasSingleton = new Canvas("BlueJ Shapes Demo", 300, 300, 
-                    Color.white);
+                    Color.blue);
         }
         canvasSingleton.setVisible(true);
         return canvasSingleton;
@@ -57,7 +57,7 @@ public class Canvas
         frame = new JFrame();
         canvas = new CanvasPane();
         frame.setContentPane(canvas);
-        frame.setTitle(title);
+        frame.setTitle("Zip Code");
         canvas.setPreferredSize(new Dimension(width, height));
         backgroundColour = bgColour;
         frame.pack();
@@ -135,8 +135,14 @@ public class Canvas
             graphic.setColor(Color.magenta);
         else if(colorString.equals("white"))
             graphic.setColor(Color.white);
+        else if(colorString.equals("gray"))
+            graphic.setColor(new Color(128,128,128));
+        else if(colorString.equals("maroon"))
+            graphic.setColor(new Color(128,0,0));
         else
             graphic.setColor(Color.black);
+        
+            
     }
 
     /**
